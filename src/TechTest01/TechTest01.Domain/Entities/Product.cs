@@ -1,5 +1,5 @@
 ﻿
-namespace TechTest01.Domain.Catalog
+namespace TechTest01.Domain.Entities
 {
     public class Product : BaseEntity
     {

@@ -4,7 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using TechTest01.Domain.Catalog;
+using TechTest01.Domain.Entities;
 
 namespace TechTest01.Repository
 {

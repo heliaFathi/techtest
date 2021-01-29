@@ -5,7 +5,7 @@
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-    using TechTest01.Domain.Catalog;
+    using TechTest01.Domain.Entities;
 
     internal sealed class Configuration : DbMigrationsConfiguration<TechTest01.Repository.CatalogContext>
     {
