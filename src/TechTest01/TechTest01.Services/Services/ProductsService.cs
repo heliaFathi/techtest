@@ -1,13 +1,7 @@
 ﻿using AutoMapper;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TechTest01.Domain.Entities;
 using TechTest01.Repository.Interfaces;
 using TechTest01.Services.Dtos;
-using TechTest01.Services.Extensions;
 using TechTest01.Services.Interfaces;
 
 namespace TechTest01.Services.Services
@@ -40,11 +34,9 @@ namespace TechTest01.Services.Services
         }
         public IEnumerable<ProductDto> GetRandom(int count)
         {
+            var products = _uow.Products.GetRandom(count);
 
-            var products = _uow.Products.GetAll();
-
-            return _mapper.Map<List<ProductDto>>(
-                   EnumerableExtension.PickRandom<Product>(products, count));
+            return _mapper.Map<List<ProductDto>>(products);
         }
     }
 }

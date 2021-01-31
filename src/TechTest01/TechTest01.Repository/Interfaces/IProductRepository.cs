@@ -10,5 +10,6 @@ namespace TechTest01.Repository.Interfaces
 {
     public interface IProductRepository: IRepository<Product>
     {
+        IEnumerable<Product> GetRandom(int count);
     }
 }

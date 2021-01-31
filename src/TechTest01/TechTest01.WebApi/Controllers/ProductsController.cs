@@ -1,10 +1,13 @@
 ﻿using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using TechTest01.Services.Interfaces;
 
 namespace TechTest01.WebApi.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ProductsController : ApiController
     {
         private IProductsService _productService;
@@ -18,7 +21,7 @@ namespace TechTest01.WebApi.Controllers
         public HttpResponseMessage GetAll()
         {
             var products = _productService.GetAll();
-           
+
             if (products == null)
             {
                 var message = string.Format("There is no product in the catalog");
@@ -66,9 +69,9 @@ namespace TechTest01.WebApi.Controllers
 
         [HttpGet]
         [Route("~/")]
-        public HttpResponseMessage GetRandom()
+        public HttpResponseMessage GetRandom(int count = 2)
         {
-            var randomProducts = _productService.GetRandom(2);
+            var randomProducts = _productService.GetRandom(count);
 
             if (randomProducts == null)
             {

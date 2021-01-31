@@ -16,7 +16,7 @@ namespace TechTest01.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-
+            config.EnableCors();
             // Web API configuration and services
             var container = new UnityContainer();
 

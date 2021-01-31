@@ -48,7 +48,6 @@
   <ItemGroup>
     <Compile Include="Mapping\AutoMapperProfile.cs" />
     <Compile Include="Dtos\ProductDto.cs" />
-    <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Interfaces\IProductsService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ProductsService.cs" />
