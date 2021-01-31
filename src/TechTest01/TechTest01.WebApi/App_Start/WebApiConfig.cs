@@ -8,6 +8,7 @@ using TechTest01.Services.Common;
 using TechTest01.Services.Interfaces;
 using TechTest01.Services.Services;
 using TechTest01.WebApi.App_Start;
+using TechTest01.WebApi.Exceptions;
 using Unity;
 
 namespace TechTest01.WebApi
@@ -30,7 +31,9 @@ namespace TechTest01.WebApi
             container.RegisterType<IProductsService, ProductsService>();
             config.DependencyResolver = new UnityResolver(container);
 
+            config.Filters.Add(new CustomExceptionFilter());
             config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionHandler());
+
             // Web API routes
             config.MapHttpAttributeRoutes();
 

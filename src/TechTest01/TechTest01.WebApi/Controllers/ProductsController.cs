@@ -4,10 +4,12 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using TechTest01.Services.Interfaces;
+using TechTest01.WebApi.Exceptions;
 
 namespace TechTest01.WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    [CustomExceptionFilter]
     public class ProductsController : ApiController
     {
         private IProductsService _productService;

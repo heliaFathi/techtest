@@ -3,7 +3,7 @@ using System.Net.Http;
 using System.Web.Http.ExceptionHandling;
 using System.Web.Http.Results;
 
-namespace TechTest01.WebApi
+namespace TechTest01.WebApi.Exceptions
 {
     internal class GlobalExceptionHandler : ExceptionHandler
     {
