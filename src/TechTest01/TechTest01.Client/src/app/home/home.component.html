@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row" *ngFor="let product of products">
+    <div class="col-sm">
+      <h4>{{product?.Name}} </h4>
+      <h6>{{product?.Price | currency }}</h6>
+      <h6>Details:</h6><p> {{product?.Description}} </p>
+      <h6>{{product?.Slug}}</h6>
+      <img src="{{product?.ImageUrl}}" >
+    </div>
+  </div>
+</div>
+
