@@ -7,10 +7,12 @@ import { HomeComponent } from './home/home.component';
 import { ProductService } from './services/product.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 
 const routes: Routes = [
   {path:'', component: HomeComponent},
   {path:'products', component: ProductsComponent},
+  {path:'product-details/:id', component: ProductDetailsComponent},
 
 ];
 
@@ -19,7 +21,8 @@ const routes: Routes = [
     AppComponent,
     NavComponent,
     HomeComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductDetailsComponent
   ],
   imports: [
     BrowserModule,

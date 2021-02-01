@@ -22,4 +22,10 @@ export class ProductService {
       { observe: 'response' })
       .pipe(map(resp => resp.body))
   }
+
+  getProductById(id: number) {
+    return this.http.get<Product>(`${this.apiUrl}products/${id}`,
+      { observe: 'response'})
+      .pipe(map(resp => resp.body))
+  }
 }
