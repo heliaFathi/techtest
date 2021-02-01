@@ -16,4 +16,10 @@ export class ProductService {
       { observe: 'response', params: new HttpParams().set('count', "2")})
       .pipe(map(resp => resp.body))
   }
+
+  getProducts() {
+    return this.http.get<Product[]>(`${this.apiUrl}products`,
+      { observe: 'response' })
+      .pipe(map(resp => resp.body))
+  }
 }

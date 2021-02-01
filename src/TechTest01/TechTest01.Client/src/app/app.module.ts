@@ -6,16 +6,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductService } from './services/product.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
-  {path:'', component: HomeComponent}
+  {path:'', component: HomeComponent},
+  {path:'products', component: ProductsComponent},
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
